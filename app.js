@@ -11,6 +11,7 @@ dotenv.config();
 //IMPORTING ROUTES
 const authRoutes = require("./routes/auth");
 const queryRoutes = require("./routes/query");
+const responseRoutes = require("./routes/response");
 
 //CONNECTING TO BACKEND
 mongoose
@@ -33,6 +34,7 @@ app.use(morgan("common"));
 //ROUTES
 app.use("/api", authRoutes);
 app.use("/api/query", queryRoutes);
+app.use("/api/response", responseRoutes);
 
 //CONNECTING SERVER
 const port = process.env.PORT;

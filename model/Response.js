@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const querySchema = new mongoose.Schema(
+const responseSchema = new mongoose.Schema(
   {
     userId: {
       type: String,
@@ -7,7 +7,7 @@ const querySchema = new mongoose.Schema(
     },
     queryId: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "Publisher",
+      ref: "Query",
       required: true,
     },
     answer: {
@@ -18,4 +18,4 @@ const querySchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-module.exports = mongoose.model("Query", querySchema);
+module.exports = mongoose.model("Response", responseSchema);

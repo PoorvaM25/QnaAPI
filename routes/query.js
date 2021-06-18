@@ -8,6 +8,7 @@ router.get("/test", isSignin, (req, res) => {
   });
 });
 
+//POST QUERY
 router.post("/askquery", isSignin, postQuery);
 
 module.exports = router;
