@@ -30,8 +30,6 @@ exports.signIn = (req, res) => {
       });
     }
 
-    //here we create
-
     //create Token
     const token = jwt.sign({ _id: user._id }, process.env.SECRET);
 

@@ -5,20 +5,15 @@ const querySchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    image: {
-      type: String,
+    queryId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Publisher",
+      required: true,
     },
-    query: {
+    answer: {
       type: String,
       required: true,
     },
-    response: [
-      {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Response",
-        default: [],
-      },
-    ],
   },
   { timestamps: true }
 );
